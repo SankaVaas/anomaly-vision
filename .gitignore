@@ -1,0 +1,19 @@
+# data & outputs
+data/raw/
+outputs/
+*.pt
+*.pth
+
+# python
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+
+# notebooks
+.ipynb_checkpoints/
+
+# ide
+.vscode/
+.idea/

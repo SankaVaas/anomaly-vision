@@ -1,0 +1,30 @@
+data:
+  root: "data/processed"
+  category: "bottle"          # any of the 15 MVTec categories
+  image_size: 256
+  batch_size: 8
+
+model:
+  backbone: "wide_resnet50_2" # teacher backbone (pretrained ImageNet)
+  pretrained: true
+  embed_dim: 512
+
+patchcore:
+  patch_size: 3
+  stride: 1
+  k_neighbors: 9             # kNN search in memory bank
+  subsample_ratio: 0.1       # coreset subsampling keeps memory small
+
+diffusion:
+  num_inference_steps: 50
+  noise_level: 0.4           # partial noising — not full reconstruction
+  guidance_scale: 1.0
+
+training:
+  epochs: 1                  # PatchCore is training-free; this covers fine-tune runs
+  lr: 0.0002
+  device: "cuda"
+
+output:
+  checkpoint_dir: "outputs/checkpoints"
+  results_dir: "outputs/results"
