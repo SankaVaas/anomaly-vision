@@ -243,8 +243,3 @@ Most anomaly detection repos train a model and report AUROC. This project:
 - [ ] FastAPI inference server
 
 ---
-
-<div align="center">
-Built for the <strong>AI Tech Lead / Architect</strong> portfolio  
-Domain: Industrial Computer Vision · Zero-Shot Anomaly Detection
-</div>
